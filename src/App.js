@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-
+import EQCSS from 'eqcss';
 
 class App extends Component {
   constructor() {
@@ -20,6 +19,10 @@ class App extends Component {
       });
     };
     setTimeout(callback, delay);
+  }
+
+  componentDidUpdate() {
+    EQCSS.apply();
   }
 
   headerNode() {
